@@ -16,9 +16,22 @@
   overflow: hidden;
 }
 
-.nav-links {
+.nav-links-desktop {
+  display: none;
+}
+
+.nav-mobile {
   width: inherit;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+}
+
+.nav-links-mobile {
+  width: inherit;
+  height: inherit;
   position: fixed;
   top: 0;
   left: -100%;
@@ -50,7 +63,7 @@
 
 .fa-x,
 .fa-bars {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: rgba(0, 0, 0, 0.348);
 }
 
@@ -58,7 +71,7 @@
   color: white;
 }
 
-.nav-links ul {
+.nav-links-mobile ul {
   text-align: center;
   margin: 40vh auto;
 }
@@ -68,7 +81,7 @@
   text-decoration: none;
   color: black;
   line-height: 2.5;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .logo {
@@ -82,7 +95,8 @@
 }
 
 .logo img {
-  width: 360px;
+  display: block;
+  width: 22.5em;
   margin: 0 auto;
 }
 
@@ -119,19 +133,44 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .open-nav,
   .close-nav {
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+  }
+
+  .fa-x,
+  .fa-bars {
+    font-size: 3.125rem;
+  }
+
+  .link {
+    font-size: 1.875rem;
+  }
+
+  .logo img {
+    width: 35rem;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .nav-mobile {
     display: none;
   }
 
-  .nav-links {
+  .nav-links-desktop {
+    display: block;
+    width: 100vw;
     height: 10vh;
+    position: fixed;
+    top: 0;
     left: 0;
-    background: transparent;
+    z-index: 2;
   }
 
-  .nav-links ul {
+  .nav-links-desktop ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -157,7 +196,6 @@
 
   .logo img {
     width: 600px;
-    margin: 0 35vw;
     opacity: 0.5;
   }
 
