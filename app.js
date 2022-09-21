@@ -18,7 +18,6 @@ function slider() {
     currentImg = 1;
   }
   bgImages.style.backgroundImage = `url(img/${version}/${currentImg}.jpg)`;
-  // bgImages.style.transition = 'opacity 1s ease-in-out';
   currentImg++;
   setTimeout(() => {
     this.slider();
@@ -29,7 +28,7 @@ function slider() {
 
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
-const nav = document.querySelector('.nav-links');
+const nav = document.querySelector('.nav-links-mobile');
 
 function activeNav() {
   nav.classList.toggle('active-nav');
