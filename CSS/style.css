@@ -9,11 +9,19 @@
   font-family: var(--main-font);
 }
 
+body {
+  height: 100%;
+  background-color: var(--black);
+}
+
 .main {
   width: 100vw;
   max-height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .nav-links-desktop {

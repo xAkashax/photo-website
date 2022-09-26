@@ -1,9 +1,24 @@
 @import url(./css/variables.css);
 
-.wrap-contact {
+body {
+  height: 100%;
+  background-color: var(--black);
+}
+
+.main {
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--black);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: scroll;
+}
+
+.wrap-contact {
+  width: 100vw;
+  height: 100%;
 }
 
 .wrap-contact h1 {
@@ -18,7 +33,7 @@
 }
 
 .logo-contact img {
-  width: 22rem;
+  width: 18.75rem;
   opacity: 0.5;
   margin: 0 auto;
   display: block;
@@ -49,30 +64,61 @@ form {
 }
 
 textarea {
-  height: 10rem;
+  height: 8rem;
   resize: vertical;
 }
 
 [type='submit'] {
+  display: block;
+  margin: 0 auto;
   font-family: var(--second-font);
-  width: 100%;
+  width: 60%;
   background: var(--link);
-  border-radius: 0.125rem;
+  border-radius: 2rem;
   border: 0;
-  cursor: pointer;
   color: rgba(255, 255, 255, 0.561);
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   margin-top: -0.25rem;
   font-weight: 500;
 }
 
+footer {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: var(--link);
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  word-spacing: 0.25rem;
+}
+
+.copyright .github {
+  font-family: var(--second-font);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.btn-social {
+  display: inline-block;
+  margin: 0 0.625rem;
+}
+
+.btn-social i {
+  color: var(--link);
+  line-height: 1.5rem;
+}
+
 @media only screen and (min-width: 768px) {
-  .wrap-contact {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: var(--black);
+  .main {
+    overflow: hidden;
   }
 
   .wrap-contact h1 {
@@ -86,7 +132,7 @@ textarea {
 
   .logo-contact img {
     width: 40rem;
-    opacity: 0.4;
+    opacity: 0.6;
   }
 
   form {
@@ -113,32 +159,36 @@ textarea {
     display: block;
     border-radius: 2rem;
   }
+
+  footer {
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 1.185rem;
+    margin-top: 1rem;
+    word-spacing: 0.35rem;
+  }
+
+  .btn-social {
+    display: inline-block;
+    margin: 0.125rem 2rem;
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 1023px) {
-  .wrap-contact {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: var(--black);
-  }
-
   .wrap-contact h1 {
-    display: block;
-    text-align: center;
     margin-bottom: 0.75rem;
-
-    color: var(--link);
   }
 
   .logo-contact {
-    padding-top: 3rem;
+    padding-top: 2rem;
   }
 
   .logo-contact img {
     width: 35rem;
-    opacity: 0.5;
-    margin: 0 auto;
-    display: block;
+    opacity: 0.6;
   }
 
   form {
@@ -149,12 +199,6 @@ textarea {
   }
 
   .feedback-input {
-    color: var(--white);
-    font-family: var(--first-font);
-    font-size: 1rem;
-    border-radius: 1rem;
-    line-height: 1.5rem;
-    background-color: transparent;
     border: 0.125rem solid var(--link);
     transition: all 0.3s;
     padding: 0.75rem;
@@ -174,23 +218,45 @@ textarea {
   }
 
   [type='submit'] {
-    font-family: var(--second-font);
-    width: 100%;
-    background: var(--link);
-    border-radius: 0.125rem;
-    border: 0;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.561);
     font-size: 1.4rem;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-    transition: all 0.3s;
-    margin-top: -0.25rem;
-    font-weight: 500;
   }
 
   [type='submit']:hover {
     background: var(--white);
     color: var(--black);
+  }
+
+  .copyright {
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+
+  .copyright .github:hover {
+    color: rgb(95, 0, 85);
+  }
+
+  .btn-social {
+    margin: 0 2rem;
+    width: 2.875rem;
+    height: 2.875rem;
+    border-radius: 30%;
+    box-shadow: 0 1px 15px -5px var(--white);
+    transition: 0.5s linear;
+  }
+
+  .btn-social i {
+    font-size: 2rem;
+    color: var(--link);
+    line-height: 1rem;
+    transition: 0.5s linear;
+  }
+
+  .btn-social:hover,
+  i:hover {
+    color: var(--hover-social);
+    box-shadow: 0 1px 15px -5px var(--hover-social);
   }
 }
