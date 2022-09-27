@@ -45,3 +45,5 @@ closeNav.addEventListener('click', () => {
   openNav.style.display = 'block';
   closeNav.style.display = 'none';
 });
+
+// formularz
