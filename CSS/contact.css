@@ -6,14 +6,14 @@ body {
 }
 
 .main {
-  width: 100vw;
-  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   overflow: scroll;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .wrap-contact {
@@ -23,8 +23,8 @@ body {
 
 .wrap-contact h1 {
   display: block;
-  text-align: center;
   margin-bottom: 0.75rem;
+  text-align: center;
   color: var(--link);
 }
 
@@ -32,11 +32,11 @@ body {
   padding-top: 3rem;
 }
 
-.logo-contact img {
-  width: 18.75rem;
+.logo-contact-img {
+  display: block;
   opacity: 0.5;
   margin: 0 auto;
-  display: block;
+  width: 18.75rem;
 }
 
 form {
@@ -44,19 +44,19 @@ form {
 }
 
 .feedback-input {
-  color: var(--white);
-  font-family: var(--first-font);
-  font-size: 1rem;
-  border-radius: 1rem;
-  line-height: 1.5rem;
-  background-color: transparent;
-  border: 0.125rem solid var(--link);
   transition: all 0.3s;
-  padding: 0.75rem;
   margin-bottom: 0.75rem;
+  border: 0.125rem solid var(--link);
+  border-radius: 1rem;
   width: 100%;
-  outline: 0;
+  padding: 0.75rem;
+  background-color: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: var(--first-font);
+  color: var(--white);
   text-align: center;
+  outline: 0;
 }
 
 .feedback-input:focus {
@@ -68,42 +68,42 @@ textarea {
   resize: vertical;
 }
 
-[type='submit'] {
+.btn-input {
   display: block;
   margin: 0 auto;
-  font-family: var(--second-font);
-  width: 60%;
-  background: var(--link);
-  border-radius: 2rem;
+  margin-top: -0.25rem;
   border: 0;
-  color: rgba(255, 255, 255, 0.561);
-  font-size: 1rem;
+  border-radius: 2rem;
+  width: 60%;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  margin-top: -0.25rem;
+  background: var(--link);
+  font-size: 1rem;
+  font-family: var(--second-font);
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.561);
 }
 
 footer {
   width: 100%;
-  background-color: var(--black);
-  color: var(--white);
   padding: 1.25rem;
+  background-color: var(--black);
   text-align: center;
+  color: var(--white);
 }
 
 .copyright {
-  font-size: 0.7rem;
-  color: var(--link);
   opacity: 0.5;
   margin-top: 0.5rem;
+  font-size: 0.7rem;
   word-spacing: 0.25rem;
+  color: var(--link);
 }
 
-.copyright .github {
+.github {
   font-family: var(--second-font);
-  color: var(--white);
   text-decoration: none;
+  color: var(--white);
 }
 
 .btn-social {
@@ -112,8 +112,8 @@ footer {
 }
 
 .btn-social i {
-  color: var(--link);
   line-height: 1.5rem;
+  color: var(--link);
 }
 
 @media only screen and (min-width: 768px) {
@@ -122,17 +122,17 @@ footer {
   }
 
   .wrap-contact h1 {
-    font-size: 3rem;
     margin-bottom: 2rem;
+    font-size: 3rem;
   }
 
   .logo-contact {
     padding-top: 5rem;
   }
 
-  .logo-contact img {
-    width: 40rem;
+  .logo-contact-img {
     opacity: 0.6;
+    width: 40rem;
   }
 
   form {
@@ -140,24 +140,24 @@ footer {
   }
 
   .feedback-input {
+    margin-bottom: 1.5rem;
+    padding: 0.875rem;
     font-size: 1.5rem;
     line-height: 2.5rem;
-    padding: 0.875rem;
-    margin-bottom: 1.5rem;
   }
 
   textarea {
     height: 15rem;
   }
 
-  [type='submit'] {
-    font-size: 1.6rem;
+  .btn-input {
+    display: block;
+    margin: 0 auto;
+    border-radius: 2rem;
+    width: 60%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-    border-radius: 2rem;
+    font-size: 1.6rem;
   }
 
   footer {
@@ -165,8 +165,8 @@ footer {
   }
 
   .copyright {
-    font-size: 1.185rem;
     margin-top: 1rem;
+    font-size: 1.185rem;
     word-spacing: 0.35rem;
   }
 
@@ -186,26 +186,26 @@ footer {
     padding-top: 2rem;
   }
 
-  .logo-contact img {
-    width: 35rem;
+  .logo-contact-img {
     opacity: 0.6;
+    width: 35rem;
   }
 
   form {
-    width: 50%;
+    display: block;
     margin: 0 3.125rem;
     margin: 0 auto;
-    display: block;
+    width: 50%;
   }
 
   .feedback-input {
-    border: 0.125rem solid var(--link);
     transition: all 0.3s;
-    padding: 0.75rem;
     margin-bottom: 0.75rem;
+    border: 0.125rem solid var(--link);
     width: 100%;
-    outline: 0;
+    padding: 0.75rem;
     text-align: center;
+    outline: 0;
   }
 
   .feedback-input:focus {
@@ -217,46 +217,46 @@ footer {
     resize: vertical;
   }
 
-  [type='submit'] {
-    cursor: pointer;
-    font-size: 1.4rem;
+  .btn-input {
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
+    cursor: pointer;
+    font-size: 1.4rem;
   }
 
-  [type='submit']:hover {
+  .btn-input:hover {
     background: var(--white);
     color: var(--black);
   }
 
   .copyright {
-    font-size: 1rem;
     opacity: 0.6;
+    font-size: 1rem;
   }
 
-  .copyright .github:hover {
+  .github:hover {
     color: rgb(95, 0, 85);
   }
 
   .btn-social {
+    transition: 0.5s linear;
     margin: 0 2rem;
+    box-shadow: 0 1px 15px -5px var(--white);
+    border-radius: 30%;
     width: 2.875rem;
     height: 2.875rem;
-    border-radius: 30%;
-    box-shadow: 0 1px 15px -5px var(--white);
-    transition: 0.5s linear;
   }
 
   .btn-social i {
-    font-size: 2rem;
-    color: var(--link);
-    line-height: 1rem;
     transition: 0.5s linear;
+    font-size: 2rem;
+    line-height: 1rem;
+    color: var(--link);
   }
 
   .btn-social:hover,
   i:hover {
-    color: var(--hover-social);
     box-shadow: 0 1px 15px -5px var(--hover-social);
+    color: var(--hover-social);
   }
 }

@@ -1,0 +1,126 @@
+@import url(./css/variables.css);
+
+.nav-mobile {
+  z-index: 3;
+}
+
+.nav-links-mobile {
+  z-index: 3;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  width: 18rem;
+  height: 18rem;
+  background: var(--black);
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 0 50px 2px rgba(75, 5, 96, 0.389);
+  border: 2px solid var(--link);
+  color: var(--white);
+  /* padding: 20px; */
+}
+
+.content {
+  width: 16rem;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  right: 13px;
+  bottom: 13px;
+  border: 1px solid var(--link);
+  /* padding: 20px; */
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+}
+
+.img-me {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 15rem;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.quote {
+  color: var(--link);
+  text-align: center;
+  position: fixed;
+  bottom: 15vh;
+  left: 0;
+  right: 0;
+  padding: 15px 40px 10px;
+}
+
+.guote-text {
+  font-size: 0.875rem;
+  color: var(--link);
+  text-align: center;
+  font-family: var(--second-font);
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.box span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.box span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.box span:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.box span:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.box span:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--hover-social);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
