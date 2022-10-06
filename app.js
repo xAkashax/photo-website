@@ -49,3 +49,24 @@ closeNav.addEventListener('click', () => {
 // formularz
 
 // galeria
+function fetchImage() {
+  var myHeaders = new Headers();
+  //myHeaders.append('Authorization', 'Client-ID c300f51e598cc26');
+  myHeaders.append(
+    'Authorization',
+    'Bearer c824cac64401f471be795bd28684eafad0e076ea'
+  );
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow',
+  };
+
+  fetch('https://api.imgur.com/3/account/xakashax/albums/', requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}
+
+fetchImage();
