@@ -53,9 +53,10 @@
   padding: 0.938rem 2.5rem 0.625rem;
   text-align: center;
   color: var(--link);
+  text-overflow: ellipsis;
 }
 
-.guote-text {
+.quote-text {
   font-size: 0.875rem;
   font-family: var(--second-font);
   text-align: center;
