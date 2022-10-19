@@ -1,7 +1,5 @@
 'use strict';
 
-// otwieranie menu
-
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
 const nav = document.querySelector('.nav-links-mobile');
