@@ -1,4 +1,8 @@
-@import url(variables.css);
+@import url(./variables.css);
+
+body {
+  overflow-x: hidden;
+}
 
 .gallery-container {
   display: flex;
@@ -8,6 +12,7 @@
   box-sizing: border-box;
   height: 100vh;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .gallery-box {
@@ -16,11 +21,19 @@
   margin: 2rem 3rem;
   border: 1px solid var(--link);
   line-height: 0;
+  cursor: pointer;
 }
 
 .gallery-box > .album-cover {
   width: 100%;
+}
+
+.inactive-cover {
   filter: grayscale(100%);
+}
+
+.active-cover {
+  filter: grayscale(0);
 }
 
 .gallery-box > span {
@@ -32,6 +45,26 @@
 
 .gallery-span {
   color: var(--white);
+}
+
+.gallery-generated {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 0;
+  -webkit-column-count: 1; /* split it into 4 columns */
+  -webkit-column-gap: 0.125rem; /* give it a 5px gap between columns */
+  -moz-column-count: 1;
+  -moz-column-gap: 0.125rem;
+  column-count: 1;
+  column-gap: 0.125rem;
+  position: relative;
+}
+
+.img-gallery {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 0.625rem; /* to match column gap */
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -48,9 +81,21 @@
   .gallery-box > span {
     font-size: 1.5rem;
   }
+
+  .gallery-generated {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0.625rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 0.625rem;
+    column-count: 2;
+    column-gap: 0.625rem;
+  }
 }
 
 @media only screen and (min-width: 1023px) {
+  .nav-links-desktop {
+    background-color: var(--black);
+  }
   .gallery-container {
     padding: 9.125rem 1.625rem 4.625rem;
     overflow: hidden;
@@ -88,5 +133,11 @@
 
   .gallery-span {
     color: var(--white);
+  }
+
+  .gallery-generated {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
   }
 }
