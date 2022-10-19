@@ -229,14 +229,6 @@ footer {
     color: var(--black);
   }
 
-  /* footer {
-    width: 100%;
-    padding: 1.25rem;
-    background-color: var(--black);
-    text-align: center;
-    color: var(--white);
-  } */
-
   .copyright {
     opacity: 0.6;
     font-size: 1rem;
@@ -249,7 +241,7 @@ footer {
   .btn-social {
     transition: 0.5s linear;
     margin: 0 2rem;
-    box-shadow: 0 1px 15px -5px var(--white);
+    box-shadow: 0 0.063rem 0.938rem -0.313rem var(--white);
     border-radius: 30%;
     width: 2.125rem;
     height: 2.125rem;

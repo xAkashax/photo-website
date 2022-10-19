@@ -1,7 +1,5 @@
 'use strict';
 
-// pobieranie i zmiana zdjęć w tle
-
 document.addEventListener('DOMContentLoaded', () => {
   this.slider();
 });

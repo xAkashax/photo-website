@@ -31,8 +31,6 @@ async function fetchAlbumImages(albumId) {
 }
 
 async function fillAlbums() {
-  // wyrenderuj kafelki
-  // pobierz kontener
   let albums = await fetchAlbums();
   const galleryContainer = document.querySelector('.gallery-container');
   albums.forEach(album => {
@@ -73,7 +71,6 @@ async function fillAlbums() {
 }
 
 async function fillGallery(gallery) {
-  // wyrenderuj galerię
   const generatedGalleryContainer =
     document.querySelector('.gallery-generated');
 
