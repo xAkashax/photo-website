@@ -109,6 +109,7 @@ footer {
 .btn-social {
   display: inline-block;
   margin: 0 0.625rem;
+  text-decoration: none;
 }
 
 .btn-social i {
