@@ -241,7 +241,6 @@ footer {
   .btn-social {
     transition: 0.5s linear;
     margin: 0 2rem;
-    box-shadow: 0 0.063rem 0.938rem -0.313rem var(--white);
     border-radius: 30%;
     width: 2.125rem;
     height: 2.125rem;
@@ -259,7 +258,6 @@ footer {
 
   .btn-social:hover,
   i:hover {
-    box-shadow: 0 1px 15px -5px var(--hover-social);
     color: var(--hover-social);
   }
 }
