@@ -26,6 +26,7 @@ body {
 
 .nav-links-desktop {
   display: none;
+  background-color: rgba(0, 0, 0, 0.818);
 }
 
 .nav-mobile {
@@ -72,11 +73,7 @@ body {
 .fa-x,
 .fa-bars {
   font-size: 1.875rem;
-  color: var(--icon-colors);
-}
-
-.fa-bars {
-  color: white;
+  color: var(--hover-social-light);
 }
 
 .nav-links-mobile ul {
@@ -122,6 +119,7 @@ body {
   -webkit-animation: 5000ms pulsate infinite alternate ease-in-out;
   animation: 5000ms pulsate infinite alternate ease-in-out;
   height: 100vh;
+  width: 100vw;
   background-image: url(img/mobile/1.jpg);
   background-position: center;
   background-size: cover;
@@ -187,7 +185,7 @@ body {
     left: 0;
     display: block;
     width: 100vw;
-    height: 10vh;
+    height: 8vh;
   }
 
   .nav-links-desktop ul {
@@ -195,9 +193,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 20px auto;
-    width: 35vw;
-    text-align: center;
+    margin: 0.625rem auto;
+    width: 60vw;
   }
 
   .link {
@@ -205,7 +202,7 @@ body {
     box-shadow: inset 0 0 0 0 var(--link);
     padding: 0 0.4rem;
     font-size: 22px;
-    color: var(--link);
+    color: var(--white);
   }
 
   .link:hover {
@@ -215,10 +212,12 @@ body {
 
   .logo img {
     opacity: 0.5;
-    width: 600px;
+    width: 37.5rem;
   }
 
   .bg-img {
     background-image: url(img/desktop/1.jpg);
+    width: 100vw;
+    height: 100vh;
   }
 }

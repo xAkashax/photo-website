@@ -2,8 +2,10 @@
   --black: rgb(0, 0, 0);
   --icon-colors: rgba(0, 0, 0, 0.348);
   --white: rgb(225, 225, 225);
-  --link: rgb(51, 48, 48);
+  --link: rgb(27, 25, 25);
+  --link-light: rgb(127, 123, 123);
   --hover-social: rgb(95, 0, 85);
+  --hover-social-light: rgba(95, 0, 86, 0.305);
   --main-font: 'Reem Kufi Ink', sans-serif;
   --second-font: 'Gotu', sans-serif;
 }
